@@ -79,4 +79,29 @@ class Rolodex
 		puts "Contact succcessfully deleted"
 	end
 
+	def modify_existing_contact(id)
+		@contacts[id].map { |x| 
+			if x.to_i == id.to_i
+				id.to_i
+			else
+				puts "No contact with that id"
+			}
+
+
+		@contacts.each do |contact|
+			if contact.id.to_i == id.to_i 
+			  	puts "What is the new first name?"
+			  	first_name = gets.chomp
+			  	@contacts[contact.id].replace 
+			  	puts "What is the new last name?"
+			  	last_name = gets.chomp
+			  	puts "What is the new email?"
+			  	email = gets.chomp
+			else
+				puts "No contact with that ID."
+		  	end
+		end
+
+	end
+
 end

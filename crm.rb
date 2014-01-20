@@ -80,13 +80,8 @@ class CRM
 	def modify_existing_contact
 		puts "What is the id of the contact you would like to modify?"
 		id = gets.chomp
-		puts "What is the new first name?"
-		first_name = gets.chomp
-		puts "What is the new last name?"
-		last_name = gets.chomp
-		puts "What is the new email?"
-		email = gets_chomp
-		@rolodex.modify_existing_contact(first_name)
+		@rolodex.modify_existing_contact(id)
+	end
 end
 
 @crm = CRM.new
